@@ -1,13 +1,14 @@
-const PostSchema = new mongoose.Schema({
-    user: {
+import mongoose, {Schema} from 'mongoose'
+
+const PostSchema = new Schema({
+    userId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true,
     },
 
-    imageUrl: {
-        type: String,
-        required: true,
+    avatar: {
+        type: String, 
     },
 
     caption: {
